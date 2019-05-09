@@ -1,0 +1,20 @@
+version: "2"
+services:
+        login-app:
+            container_name: login-app
+            image: latest123/login-app
+            restart: always
+            build: .
+            ports:
+              - "2000:5500"
+            links:
+              - mongo
+        mongo:
+              container_name: mongo
+              image: mongo
+              volumes:
+                - ./data:/data/db
+              ports:
+                - '27018:27017'
+
+        
