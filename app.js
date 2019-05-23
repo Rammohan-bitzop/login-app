@@ -7,8 +7,8 @@ var express            = require("express"),
  LocalStrategy         = require("passport-local"),
  passportLocalMongoose = require("passport-local-mongoose");
 
-mongoose.connect("mongodb://172.17.0.1:27018/Samp_data");
- //mongoose.connect("mongodb://localhost/Samp_data");
+mongoose.connect("mongodb://mongo:27018/Samp_data");
+// mongoose.connect("mongodb://localhost/Samp_data");
 app.set('view engine', 'ejs');
 app.engine('html', require('ejs').renderFile); 
 
@@ -91,7 +91,7 @@ app.post("/register", (req,res)=> {
 
 
 // Local-login-port;
-app.listen(5500, function() {
+app.listen(7500, function() {
     console.log("our server has been started")
 })
    

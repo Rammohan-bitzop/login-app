@@ -1,4 +1,4 @@
-version: "2"
+version: "3"
 services:
         login-app:
             container_name: login-app
@@ -6,7 +6,7 @@ services:
             restart: always
             build: .
             ports:
-              - "2000:5500"
+              - "7500:7500"
             links:
               - mongo
         mongo:
@@ -16,5 +16,3 @@ services:
                 - ./data:/data/db
               ports:
                 - '27018:27017'
-
-        
