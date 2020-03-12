@@ -1,0 +1,1 @@
+Thanks for the tutorial on Medium, really nice summary on how Docker works and get started fast!
