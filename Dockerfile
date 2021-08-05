@@ -3,7 +3,7 @@
  RUN mkdir -p /app
  WORKDIR /app
  #/usr/src/app
- cOPY package.json /app
+ COPY package.json /app
  RUN npm install
 
  COPY . /app
